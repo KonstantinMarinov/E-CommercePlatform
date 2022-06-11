@@ -20,3 +20,4 @@ NuGet Packages:
 
 - Microsoft.EntityFrameworkCore.Sqlite
 - Microsoft.EntityFrameworkCore.Design
+- Swashbuckle.AspNetCore
