@@ -14,6 +14,10 @@ namespace Infrastructure.Data.Config
             builder.Property(p => p.Description).IsRequired().HasMaxLength(100);
             builder.Property(p => p.Price).HasColumnName("decimal(18,2)");
             builder.Property(p => p.PictureUrl).IsRequired();
+            builder.HasOne(b => b.ProductBrand).WithMany()
+                .HasForeignKey(p => p.ProductBrandId);
+            builder.HasOne(t => t.ProductType).WithMany()
+                .HasForeignKey(p => p.ProductTypeId);
         }
     }
 }
