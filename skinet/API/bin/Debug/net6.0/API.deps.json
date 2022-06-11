@@ -9,7 +9,9 @@
       "API/1.0.0": {
         "dependencies": {
           "Infrastructure": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.5",
           "Microsoft.EntityFrameworkCore.Design": "6.0.5",
+          "Microsoft.EntityFrameworkCore.Sqlite": "6.0.5",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
@@ -358,6 +360,10 @@
         }
       },
       "Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.5",
+          "Microsoft.EntityFrameworkCore.Sqlite": "6.0.5"
+        },
         "runtime": {
           "Core.dll": {}
         }
@@ -365,6 +371,7 @@
       "Infrastructure/1.0.0": {
         "dependencies": {
           "Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "6.0.5",
           "Microsoft.EntityFrameworkCore.Sqlite": "6.0.5"
         },
         "runtime": {
