@@ -21,3 +21,7 @@ NuGet Packages:
 - Microsoft.EntityFrameworkCore.Sqlite
 - Microsoft.EntityFrameworkCore.Design
 - Swashbuckle.AspNetCore
+
+IDE Tools:
+
+Entity Framework Tool: dotnet tool install --global dotnet-ef
