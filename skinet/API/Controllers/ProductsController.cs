@@ -6,6 +6,7 @@ using Core.Interfaces;
 
 namespace API.Controllers
 {
+    [ApiController]
     [Route("api/[controller]")]
     public class ProductsController : ControllerBase
     {
@@ -27,6 +28,18 @@ namespace API.Controllers
         public async Task<ActionResult<Product>> GetProducts(int id)
         {
             return await repo.GetProductByIdAsync(id);
+        }
+
+        [HttpGet("brands")]
+        public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetProductBrands()
+        {
+            return Ok(await repo.GetProductBrandsAsync());
+        }
+
+        [HttpGet("types")]
+        public async Task<ActionResult<IReadOnlyList<ProductType>>> GetProductTypes()
+        {
+            return Ok(await repo.GetProductTypesAsync());
         }
     }
 }
