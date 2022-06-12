@@ -1269,24 +1269,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Kocq\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\moka\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\SkiNet\\E-CommercePlatform\\skinet\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Moka\\E-CommercePlatform\\skinet\\Core\\Core.csproj",
       "projectName": "Core",
-      "projectPath": "C:\\Projects\\SkiNet\\E-CommercePlatform\\skinet\\Core\\Core.csproj",
-      "packagesPath": "C:\\Users\\Kocq\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\SkiNet\\E-CommercePlatform\\skinet\\Core\\obj\\",
+      "projectPath": "C:\\Moka\\E-CommercePlatform\\skinet\\Core\\Core.csproj",
+      "packagesPath": "C:\\Users\\moka\\.nuget\\packages\\",
+      "outputPath": "C:\\Moka\\E-CommercePlatform\\skinet\\Core\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Kocq\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\moka\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1336,7 +1331,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.105\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
