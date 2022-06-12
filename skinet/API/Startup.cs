@@ -1,11 +1,6 @@
-using System.IO;
+using Core.Interfaces;
 using Infrastructure.Data;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.FileProviders;
 using Microsoft.OpenApi.Models;
 
 namespace API
@@ -18,22 +13,24 @@ namespace API
             _config = config;
         }
 
-        public void ConfigureServices(IServiceCollection services) 
+        public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<IProductRepository, ProductRepository>();
             services.AddControllers();
-            services.AddDbContext<StoreContext>(x => 
+            services.AddDbContext<StoreContext>(x =>
                 x.UseSqlite(_config.GetConnectionString("DefaultConnection")));
 
-            services.AddSwaggerGen(c => 
+            services.AddEndpointsApiExplorer();
+            services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo {Title = "WebAPIv5", Version = "1.0"});
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebAPIv5", Version = "1.0" });
             });
 
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env) 
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if(env.IsDevelopment()) 
+            if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
@@ -44,7 +41,7 @@ namespace API
             app.UseRouting();
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints => 
+            app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
             });
