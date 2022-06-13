@@ -25,6 +25,7 @@ namespace API.Controllers
         public async Task<ActionResult<List<Product>>> GetProducts()
         {
             var products = await productsRepo.ListAllAsync();
+            
             return Ok(products);
         }
 
