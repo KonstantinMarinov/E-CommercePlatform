@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Il+5VQZiMPcdED0W99oZygm41fCYJQ4FFRnpQng+qnOzP4vJHfJC0n++8g9PB8/j8Mrhf1Kv3XbVUc/5FXAw2A==",
+  "dgSpecHash": "0ta0etKq5nPuMizTwOb6q7yIgYW0fWdVwKTw3bx02rTy7U7iO3S6rxyQnT9BXwBlVG9w87fDs765uC00oTWiyw==",
   "success": true,
   "projectFilePath": "C:\\Moka\\E-CommercePlatform\\skinet\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\moka\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\moka\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\moka\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\moka\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\moka\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.5\\microsoft.data.sqlite.core.6.0.5.nupkg.sha512",
     "C:\\Users\\moka\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.5\\microsoft.entityframeworkcore.6.0.5.nupkg.sha512",
     "C:\\Users\\moka\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.5\\microsoft.entityframeworkcore.abstractions.6.0.5.nupkg.sha512",

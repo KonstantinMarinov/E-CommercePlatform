@@ -114,3 +114,6 @@ C:\Projects\SkiNet\E-CommercePlatform\skinet\API\obj\Debug\net6.0\API.dll
 C:\Projects\SkiNet\E-CommercePlatform\skinet\API\obj\Debug\net6.0\ref\API.dll
 C:\Projects\SkiNet\E-CommercePlatform\skinet\API\obj\Debug\net6.0\API.pdb
 C:\Projects\SkiNet\E-CommercePlatform\skinet\API\obj\Debug\net6.0\API.genruntimeconfig.cache
+C:\Moka\E-CommercePlatform\skinet\API\bin\Debug\net6.0\AutoMapper.dll
+C:\Moka\E-CommercePlatform\skinet\API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Moka\E-CommercePlatform\skinet\API\bin\Debug\net6.0\API.staticwebassets.runtime.json
