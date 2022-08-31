@@ -21,6 +21,7 @@ NuGet Packages:
 - Microsoft.EntityFrameworkCore.Sqlite
 - Microsoft.EntityFrameworkCore.Design
 - Swashbuckle.AspNetCore
+- AutoMapper.Extensions.Microsoft.DependencyInjection
 
 IDE Tools:
 
