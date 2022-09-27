@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { IProduct } from './models/product';
+import { IPagination } from './models/paginated-product';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  templateUrl: 'app.component.html',
 })
-export class AppComponent {
-  title = 'client';
+export class AppComponent implements OnInit {
+  title = 'Skinet';
+
+  constructor() {}
+
+  ngOnInit(): void {}
 }
