@@ -1,3 +1,4 @@
+import { ShopParams } from './../models/shopParams';
 import { IType } from './../models/product-type';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -5,6 +6,7 @@ import { Observable } from 'rxjs';
 import { IBrand } from '../models/brand';
 import { IPagination } from '../models/paginated-product';
 import { map } from 'rxjs/operators';
+import { IProduct } from '../models/product';
 
 @Injectable({
   providedIn: 'root',
@@ -14,22 +16,25 @@ export class ShopService {
 
   constructor(private http: HttpClient) {}
 
-  getProducts(
-    brandId?: number,
-    typeId?: number,
-    sort?: string
-  ): Observable<IPagination> {
+  getProducts(shopParams: ShopParams): Observable<IPagination> {
     let params = new HttpParams();
 
-    if (brandId) {
-      params = params.append('brandId', brandId.toString());
+    if (shopParams.brandId !== 0) {
+      params = params.append('brandId', shopParams.brandId.toString());
     }
-    if (typeId) {
-      params = params.append('typeId', typeId.toString());
+    if (shopParams.typeId !== 0) {
+      params = params.append('typeId', shopParams.typeId.toString());
     }
-    if (sort) {
-      params = params.append('sort', sort);
+    if (shopParams.sort) {
+      params = params.append('sort', shopParams.sort);
     }
+
+    if (shopParams.search) {
+      params = params.append('search', shopParams.search);
+    }
+
+    params = params.append('pageIndex', shopParams.pageNumber.toString());
+    params = params.append('pageSize', shopParams.pageSize.toString());
 
     return this.http
       .get<IPagination>(this.baseUrl + 'products', {
@@ -41,6 +46,10 @@ export class ShopService {
           return response.body;
         })
       );
+  }
+
+  getProduct(id: number): Observable<IProduct> {
+    return this.http.get<IProduct>(this.baseUrl + `products/${id}`);
   }
 
   getBrands(): Observable<IBrand[]> {

@@ -1,3 +1,4 @@
+import { ImageUrlService } from './../../services/image-url.service';
 import { IProduct } from './../../models/product';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -10,20 +11,13 @@ export class ProductItemComponent implements OnInit {
   @Input() product: IProduct;
   imagePath: string;
 
-  constructor() {}
+  constructor(private imageUrlService: ImageUrlService) {}
 
   ngOnInit(): void {
     this.setImagePath();
   }
 
-  separateFileNameFromPictureUrl(pictureUrl: string): string {
-    var separated = pictureUrl.split('/');
-    return separated[separated.length - 1];
-  }
-
   setImagePath(): void {
-    this.imagePath =
-      '../../../assets/products/' +
-      this.separateFileNameFromPictureUrl(this.product.pictureUrl);
+    this.imagePath = this.imageUrlService.setImagePath(this.product.pictureUrl);
   }
 }

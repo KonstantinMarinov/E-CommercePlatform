@@ -1,3 +1,5 @@
+import { HomeModule } from './home/home.module';
+import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +19,7 @@ import { NavBarComponent } from './core/nav-bar/nav-bar.component';
     HttpClientModule,
     CoreModule,
     ShopModule,
+    HomeModule
   ],
   providers: [],
   bootstrap: [AppComponent],
