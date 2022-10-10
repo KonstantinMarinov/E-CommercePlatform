@@ -3,6 +3,7 @@ import { IProduct } from './../../models/product';
 import { ShopService } from './../shop.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { BreadcrumbService } from 'xng-breadcrumb';
 
 @Component({
   selector: 'app-product-details',
@@ -17,8 +18,11 @@ export class ProductDetailsComponent implements OnInit {
   constructor(
     private activatedRoute: ActivatedRoute,
     private shopService: ShopService,
-    private imageUrlService: ImageUrlService
-  ) {}
+    private imageUrlService: ImageUrlService,
+    private breadcrumbService: BreadcrumbService
+  ) {
+    this.breadcrumbService.set('@productDetails', '');
+  }
 
   ngOnInit(): void {
     this.setProductId();
@@ -40,6 +44,7 @@ export class ProductDetailsComponent implements OnInit {
   getProduct(id: number): void {
     this.shopService.getProduct(id).subscribe((product) => {
       this.product = product;
+      this.breadcrumbService.set('@productDetails', product.name);
       this.setImagePath();
     });
   }

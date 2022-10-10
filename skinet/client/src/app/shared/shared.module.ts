@@ -3,10 +3,16 @@ import { PaginationComponent } from './components/pagination/pagination.componen
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PaginationModule } from 'ngx-bootstrap/pagination';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 @NgModule({
   declarations: [PaginationComponent, PaginationHeaderComponent],
-  imports: [CommonModule, PaginationModule.forRoot()],
-  exports: [PaginationModule, PaginationComponent, PaginationHeaderComponent]
+  imports: [CommonModule, PaginationModule.forRoot(), CarouselModule.forRoot()],
+  exports: [
+    PaginationModule,
+    PaginationComponent,
+    CarouselModule,
+    PaginationHeaderComponent,
+  ],
 })
 export class SharedModule {}

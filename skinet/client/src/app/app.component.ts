@@ -8,8 +8,6 @@ import { IPagination } from './models/paginated-product';
   templateUrl: 'app.component.html',
 })
 export class AppComponent implements OnInit {
-  title = 'Skinet';
-
   constructor() {}
 
   ngOnInit(): void {}
