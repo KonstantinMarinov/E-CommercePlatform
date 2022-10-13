@@ -1,3 +1,4 @@
+import { BasketService } from './../basket/basket.service';
 import { ShopParams } from './../models/shopParams';
 import { IBrand } from './../models/brand';
 import { IPagination } from './../models/paginated-product';

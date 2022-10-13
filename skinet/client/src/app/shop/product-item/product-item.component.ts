@@ -1,3 +1,4 @@
+import { BasketService } from './../../basket/basket.service';
 import { ImageUrlService } from './../../services/image-url.service';
 import { IProduct } from './../../models/product';
 import { Component, Input, OnInit } from '@angular/core';
@@ -11,13 +12,20 @@ export class ProductItemComponent implements OnInit {
   @Input() product: IProduct;
   imagePath: string;
 
-  constructor(private imageUrlService: ImageUrlService) {}
+  constructor(
+    private imageUrlService: ImageUrlService,
+    private basketService: BasketService
+  ) {}
 
   ngOnInit(): void {
     this.setImagePath();
   }
 
-  setImagePath(): void {
+  private setImagePath(): void {
     this.imagePath = this.imageUrlService.setImagePath(this.product.pictureUrl);
+  }
+
+  addItemToBasket() {
+    this.basketService.addItemToBasket(this.product, 1);
   }
 }

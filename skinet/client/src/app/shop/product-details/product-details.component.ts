@@ -1,3 +1,4 @@
+import { BasketService } from './../../basket/basket.service';
 import { ImageUrlService } from './../../services/image-url.service';
 import { IProduct } from './../../models/product';
 import { ShopService } from './../shop.service';
@@ -14,12 +15,14 @@ export class ProductDetailsComponent implements OnInit {
   imagePath: string;
   productId: number;
   product: IProduct;
+  quantity = 1;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private shopService: ShopService,
     private imageUrlService: ImageUrlService,
-    private breadcrumbService: BreadcrumbService
+    private breadcrumbService: BreadcrumbService,
+    private basketService: BasketService
   ) {
     this.breadcrumbService.set('@productDetails', '');
   }
@@ -27,6 +30,20 @@ export class ProductDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.setProductId();
     this.getProduct(this.productId);
+  }
+
+  addItemToBasket() {
+    this.basketService.addItemToBasket(this.product, this.quantity);
+  }
+
+  incrementQuantity() {
+    this.quantity++;
+  }
+
+  decrementQuantity() {
+    if (this.quantity > 1) {
+      this.quantity--;
+    }
   }
 
   setImagePath(): void {

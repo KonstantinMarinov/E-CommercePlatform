@@ -1,3 +1,4 @@
+import { BasketService } from './basket/basket.service';
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { IProduct } from './models/product';
