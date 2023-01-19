@@ -31,8 +31,10 @@ namespace API.Controllers
         }
 
         [HttpDelete]
-        public async Task DeleteBasket(string id) {
+        public async Task<ActionResult> DeleteBasket(string id) {
             await _basketRepository.DeleteAsync(id);
+
+            return Ok();
         }
     }
 }
